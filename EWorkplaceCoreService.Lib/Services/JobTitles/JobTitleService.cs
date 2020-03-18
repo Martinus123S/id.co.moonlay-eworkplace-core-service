@@ -39,9 +39,9 @@ namespace EWorkplaceCoreService.Lib.Services.JobTitles
             throw new NotImplementedException();
         }
 
-        public IQueryable<JobTitleListViewModel> GetQuery()
+        public IQueryable<JobTitle> GetQuery()
         {
-            throw new NotImplementedException();
+            return _jobTitleDbSet.AsNoTracking();
         }
 
         public async Task<JobTitleViewModel> GetSingleById(int id)
